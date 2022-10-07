@@ -1,0 +1,23 @@
+{
+  "name": "data-structured",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ll.js",
+  "scripts": {
+    "test": "jest --verbose --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmedAwamleh/data-Structured.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AhmedAwamleh/data-Structured/issues"
+  },
+  "homepage": "https://github.com/AhmedAwamleh/data-Structured#readme",
+  "dependencies": {
+    "jest": "^29.1.2",
+    "jet": "^0.8.1"
+  }
+}
