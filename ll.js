@@ -13,18 +13,17 @@ class LinkedList {
       this.head = node
     }
   }
-  append(val) {
-    const node = new Node(val)
-    if (!this.head) {
-      this.head = node
-    } else {
-      let cNode = this.head;
-      while (cNode.next) {
-        cNode = cNode.next
+  append(value) {
+    const node = new Node(value);
+    if (this.head) {
+      let currentNode = this.head;
+      while (currentNode.next) {
+        currentNode = currentNode.next;
       }
-      cNode.next = node
+      return currentNode.next = node;
+    } else {
+      return this.head = node;
     }
-
   }
   size() {
     let count = 0;
@@ -64,6 +63,24 @@ class LinkedList {
       return;
     }
   }
+  deleteLastOne() {
+    if (this.head) {
+      let currentNode = this.head;
+      let i = 0
+      while (currentNode.next) {
+        currentNode = currentNode.next;
+        i++;
+      }
+      let header = this.head;
+      for (let y = 1; y < i; y++) {
+        header = header.next;
+      }
+      header.next = null;
+      return header;
+    } else {
+      return this.head;
+    }
+  }
   insertAt(location, value) {
     let node = new Node(value);
     if (!this.head) {
@@ -77,7 +94,20 @@ class LinkedList {
       current.next = node;
     }
   }
-
+  getLast() {
+    let cNode = this.head;
+    while (cNode.next) {
+      cNode = cNode.next;
+    }
+  }
+  removeFirst() {
+    if (this.head) {
+      this.head = this.head.next;
+      return (this.head);
+    } else {
+      return (`empty Linked List`);
+    }
+  }
 
 }
 
